@@ -38,6 +38,9 @@ installers/TheKingsCab-*.zip
 # Large IR collections (do not push to GitHub)
 installers/windows/ir_collections/
 installers/mac/pkg_contents/Users/Shared/King Studios/
+IR FILES/
+build_windows/
+build_real_windows/
 
 # OS junk
 Thumbs.db
