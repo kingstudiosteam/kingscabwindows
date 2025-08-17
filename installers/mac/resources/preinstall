@@ -1,0 +1,6 @@
+#!/bin/bash
+# Remove any existing installations
+rm -rf "/Library/Audio/Plug-Ins/VST3/The King's Cab.vst3"
+rm -rf "/Library/Audio/Plug-Ins/Components/The King's Cab.component"
+rm -rf "/Library/Application Support/Avid/Audio/Plug-Ins/The King's Cab.aaxplugin"
+exit 0

@@ -1,0 +1,1 @@
+C:\Dev\kingscabinstaller-main\build_windows\TheKingsCab_rc_lib.dir\Release\TheKingsCab_rc_lib.lib

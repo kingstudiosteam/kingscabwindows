@@ -1,0 +1,13 @@
+Welcome to The King's Cab Installer
+
+This installer will install The King's Cab professional impulse response loader plugin.
+
+Compatible with:
+• Logic Pro (AU Component)
+• Pro Tools (AAX Plugin)
+• All major DAWs (VST3 Plugin)
+
+Version: 1.0.0
+Company: King Studios
+
+The King's Cab provides premium cabinet simulation with 6 IR slots for professional guitar and bass recording.

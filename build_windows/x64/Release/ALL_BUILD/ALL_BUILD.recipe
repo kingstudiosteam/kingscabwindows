@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs>
+    <ProjectOutput>
+      <FullPath>C:\Dev\kingscabinstaller-main\build_windows\x64\Release\ZERO_CHECK</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\Dev\kingscabinstaller-main\build_windows\TheKingsCab_artefacts\Release\AAX\The Kings Cab.aaxplugin\Contents\x64\The Kings Cab.aaxplugin</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\Dev\kingscabinstaller-main\build_windows\TheKingsCab_artefacts\Release\Standalone\The Kings Cab.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\Dev\kingscabinstaller-main\build_windows\Release\juce_vst3_helper.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\Dev\kingscabinstaller-main\build_windows\TheKingsCab_artefacts\Release\VST3\The Kings Cab.vst3\Contents\x86_64-win\The Kings Cab.vst3</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\Dev\kingscabinstaller-main\build_windows\x64\Release\ALL_BUILD</FullPath>
+    </ProjectOutput>
+  </ProjectOutputs>
+  <ContentFiles />
+  <SatelliteDlls />
+  <NonRecipeFileRefs />
+</Project>

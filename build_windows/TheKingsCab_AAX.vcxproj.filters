@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Dev\kingscabinstaller-main\build_windows\_deps\juce-src\modules\juce_audio_plugin_client\juce_audio_plugin_client_AAX.cpp">
+      <Filter>JUCE Modules\juce_audio_plugin_client</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\kingscabinstaller-main\build_windows\_deps\juce-src\modules\juce_audio_plugin_client\juce_audio_plugin_client_AAX_utils.cpp">
+      <Filter>JUCE Modules\juce_audio_plugin_client</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\kingscabinstaller-main\build_windows\_deps\juce-src\modules\juce_audio_plugin_client\juce_audio_plugin_client_ARA.cpp">
+      <Filter>JUCE Modules\juce_audio_plugin_client</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\kingscabinstaller-main\build_windows\_deps\juce-src\modules\juce_audio_plugin_client\juce_audio_plugin_client_LV2.cpp">
+      <Filter>JUCE Modules\juce_audio_plugin_client</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\kingscabinstaller-main\build_windows\_deps\juce-src\modules\juce_audio_plugin_client\juce_audio_plugin_client_Standalone.cpp">
+      <Filter>JUCE Modules\juce_audio_plugin_client</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\kingscabinstaller-main\build_windows\_deps\juce-src\modules\juce_audio_plugin_client\juce_audio_plugin_client_Unity.cpp">
+      <Filter>JUCE Modules\juce_audio_plugin_client</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\kingscabinstaller-main\build_windows\_deps\juce-src\modules\juce_audio_plugin_client\juce_audio_plugin_client_VST2.cpp">
+      <Filter>JUCE Modules\juce_audio_plugin_client</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\kingscabinstaller-main\build_windows\_deps\juce-src\modules\juce_audio_plugin_client\juce_audio_plugin_client_VST3.cpp">
+      <Filter>JUCE Modules\juce_audio_plugin_client</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Dev\kingscabinstaller-main\build_windows\_deps\juce-src\modules\juce_audio_plugin_client\AAX\SDK\Utilities\PlugIn.ico">
+      <Filter>JUCE Modules\juce_audio_plugin_client\AAX\SDK\Utilities</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Dev\kingscabinstaller-main\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Dev\kingscabinstaller-main\build_windows\TheKingsCab_artefacts\Debug\AAX\The Kings Cab.aaxplugin\desktop.ini" />
+    <None Include="C:\Dev\kingscabinstaller-main\build_windows\TheKingsCab_artefacts\Release\AAX\The Kings Cab.aaxplugin\desktop.ini" />
+    <None Include="C:\Dev\kingscabinstaller-main\build_windows\TheKingsCab_artefacts\MinSizeRel\AAX\The Kings Cab.aaxplugin\desktop.ini" />
+    <None Include="C:\Dev\kingscabinstaller-main\build_windows\TheKingsCab_artefacts\RelWithDebInfo\AAX\The Kings Cab.aaxplugin\desktop.ini" />
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="C:\Dev\kingscabinstaller-main\build_windows\TheKingsCab_rc_lib.dir\$(Configuration)\TheKingsCab_resources.res">
+      <Filter>Object Libraries</Filter>
+    </Object>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="JUCE Modules">
+      <UniqueIdentifier>{7EC6228D-DB5C-304C-AA68-2A5585CE30B6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JUCE Modules\juce_audio_plugin_client">
+      <UniqueIdentifier>{74307977-399F-37B1-BD6D-6B91ACDB624F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JUCE Modules\juce_audio_plugin_client\AAX">
+      <UniqueIdentifier>{5C9E11D5-E6A6-3D6C-A634-71228CB3814D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JUCE Modules\juce_audio_plugin_client\AAX\SDK">
+      <UniqueIdentifier>{3F217F48-03F3-3FB7-909E-761184A9402D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JUCE Modules\juce_audio_plugin_client\AAX\SDK\Utilities">
+      <UniqueIdentifier>{830904CD-83FF-3F8B-940F-2E67E6008D07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object Libraries">
+      <UniqueIdentifier>{0CB8E425-3BB8-3FF2-858F-E39E94E8C5D9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

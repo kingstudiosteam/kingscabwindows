@@ -1,0 +1,46 @@
+# OS
+.DS_Store
+
+# Build directories
+build/
+cmake-build-*/
+CMakeFiles/
+_deps/
+cmake_install.cmake
+Makefile
+
+# Binary/artefacts
+**/TheKingsCab_artefacts/
+**/*.vst3/
+**/*.aaxplugin/
+**/*.app/
+**/*.exe
+**/*.lib
+**/*.exp
+**/*.pdb
+
+# IDE/Editor
+.vscode/
+.idea/
+*.user
+
+# CMake cache
+CMakeCache.txt
+
+# JUCE/Generated
+JuceLibraryCode/
+
+# Installer staging outputs
+installers/windows/plugins/
+installers/windows/*.zip
+installers/TheKingsCab-*.zip
+
+# Large IR collections (do not push to GitHub)
+installers/windows/ir_collections/
+installers/mac/pkg_contents/Users/Shared/King Studios/
+
+# OS junk
+Thumbs.db
+*.log
+
+

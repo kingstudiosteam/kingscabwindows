@@ -1,0 +1,119 @@
+name: Build Windows Installer
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        submodules: recursive
+    
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v2
+    
+    - name: Setup CMake
+      uses: lukka/get-cmake@latest
+    
+    - name: Configure CMake
+      run: |
+        mkdir build
+        cd build
+        cmake .. -G "Visual Studio 17 2022" -A x64 -DCMAKE_BUILD_TYPE=Release -DJUCE_BUILD_EXTRAS=OFF -DJUCE_BUILD_EXAMPLES=OFF
+    
+    - name: Build Plugin
+      run: |
+        cd build
+        cmake --build . --config Release --parallel 4
+    
+    - name: Prepare Windows Installer
+      run: |
+        # Create installer directory structure
+        mkdir installers\windows\plugins\VST3\
+        mkdir installers\windows\plugins\AAX\
+        
+        # Copy built plugins
+        if (Test-Path "build\TheKingsCab_artefacts\Release\VST3\The King's Cab.vst3") {
+          Copy-Item -Recurse "build\TheKingsCab_artefacts\Release\VST3\The King's Cab.vst3" "installers\windows\plugins\VST3\"
+          Write-Host "✅ VST3 plugin copied"
+        } else {
+          Write-Host "❌ VST3 plugin not found"
+        }
+        
+        if (Test-Path "build\TheKingsCab_artefacts\Release\AAX\The King's Cab.aaxplugin") {
+          Copy-Item -Recurse "build\TheKingsCab_artefacts\Release\AAX\The King's Cab.aaxplugin" "installers\windows\plugins\AAX\"
+          Write-Host "✅ AAX plugin copied"
+        } else {
+          Write-Host "⚠️ AAX plugin not found (Pro Tools SDK not available)"
+        }
+      shell: powershell
+    
+    - name: Create Windows Installer Package
+      run: |
+        cd installers\windows
+        Compress-Archive -Path ".\*" -DestinationPath "..\TheKingsCab-1.0.0-Windows-Complete.zip"
+        Write-Host "✅ Windows installer package created"
+      shell: powershell
+    
+    - name: Upload Windows Installer
+      uses: actions/upload-artifact@v4
+      with:
+        name: TheKingsCab-Windows-Installer
+        path: installers/TheKingsCab-1.0.0-Windows-Complete.zip
+        retention-days: 30
+    
+    - name: Upload VST3 Plugin
+      uses: actions/upload-artifact@v4
+      with:
+        name: TheKingsCab-VST3-Windows
+        path: build/TheKingsCab_artefacts/Release/VST3/The King's Cab.vst3/
+        retention-days: 30
+      if: always()
+    
+    - name: Upload AAX Plugin
+      uses: actions/upload-artifact@v4
+      with:
+        name: TheKingsCab-AAX-Windows  
+        path: build/TheKingsCab_artefacts/Release/AAX/The King's Cab.aaxplugin/
+        retention-days: 30
+      if: always()
+
+  build-macos:
+    runs-on: macos-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        submodules: recursive
+    
+    - name: Setup Xcode
+      uses: maxim-lobanov/setup-xcode@v1
+      with:
+        xcode-version: latest-stable
+    
+    - name: Configure CMake
+      run: |
+        mkdir build
+        cd build
+        cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64" -DCMAKE_OSX_DEPLOYMENT_TARGET=10.13
+    
+    - name: Build Plugin
+      run: |
+        cd build
+        cmake --build . --config Release -j4
+    
+    - name: Upload macOS Installer
+      uses: actions/upload-artifact@v4
+      with:
+        name: TheKingsCab-macOS-Installer
+        path: installers/mac/TheKingsCab-1.0.0-macOS.pkg
+        retention-days: 30

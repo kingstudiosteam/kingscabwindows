@@ -1,0 +1,36 @@
+🚨 WINDOWS PLUGIN BINARIES NEEDED
+================================
+
+The Windows installer is missing the actual Windows plugin binaries.
+
+WHAT'S MISSING:
+--------------
+• Windows VST3 plugin binary (.vst3 bundle)
+• Windows AAX plugin binary (.aaxplugin bundle)
+
+WHAT'S INCLUDED:
+---------------
+✅ Complete IR collections (500+ files)
+✅ Professional installation scripts
+✅ Windows installer framework
+
+TO BUILD WINDOWS PLUGINS:
+-------------------------
+1. Use a Windows machine with Visual Studio
+2. Run the provided build_windows.bat script
+3. Or follow BUILD_WINDOWS_GUIDE.md
+
+ALTERNATIVE SOLUTIONS:
+---------------------
+1. Cross-compile from macOS (complex)
+2. Use GitHub Actions for automated builds
+3. Build on Windows Subsystem for Linux
+4. Use cloud build services
+
+CURRENT STATUS:
+--------------
+❌ Windows installer: Missing plugin binaries
+✅ macOS installer: Complete and functional
+✅ IR collections: Included in both installers
+
+The installer framework is ready - we just need the actual Windows plugin files!

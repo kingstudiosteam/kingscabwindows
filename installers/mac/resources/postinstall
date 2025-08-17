@@ -1,0 +1,27 @@
+#!/bin/bash
+echo "The King's Cab installation completed successfully!"
+
+# Set proper permissions for plugins
+chmod -R 755 "/Library/Audio/Plug-Ins/VST3/The King's Cab.vst3"
+chmod -R 755 "/Library/Audio/Plug-Ins/Components/The King's Cab.component"
+
+if [ -d "/Library/Application Support/Avid/Audio/Plug-Ins/The King's Cab.aaxplugin" ]; then
+    chmod -R 755 "/Library/Application Support/Avid/Audio/Plug-Ins/The King's Cab.aaxplugin"
+fi
+
+# Set proper permissions for IR Collections
+if [ -d "/Users/Shared/King Studios/The Kings Cab/IR Collections" ]; then
+    chmod -R 755 "/Users/Shared/King Studios/The Kings Cab"
+    echo "✅ IR Collections installed and configured!"
+fi
+
+# Kill any running DAWs to ensure plugin registration
+killall "Logic Pro" 2>/dev/null || true
+killall "Pro Tools" 2>/dev/null || true
+killall "Reaper" 2>/dev/null || true
+killall "Ableton Live" 2>/dev/null || true
+
+echo "✅ The King's Cab is ready to use in your DAW!"
+echo "🎸 Visit https://www.kingstudiospa.com/store for premium IR collections"
+
+exit 0

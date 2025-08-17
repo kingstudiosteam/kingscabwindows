@@ -1,0 +1,13 @@
+FREDDY FOLDER - FREDMAN MIC SETUP WITH 2 57S
+
+MIC BLENDS - In the microphone blend folder you will see numbers 0 through 100 and that just means that "0" being the microphone on the left and "100" being the microphone on the right
+is just blends of those two microphones.
+So for instance, 50 would be a 50-50 percent blend of the two microphones.
+You can mix and match any IR with any other IR and they will be phase coherent.
+
+
+SINGLE MICS - For the single microphones, you will see 25 through 75 and this just means the left and right parameters on the DynaMount.
+50 is center cone so 25 is left and 75 is right so you can find your spot. All of these IRs are phase coherent for blending.
+
+
+CUSTOM BLENDS - The custom blend folder is just something that I made to get you started faster. You can use these IRs to also blend with single microphones from any folder as well.
